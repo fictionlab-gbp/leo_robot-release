@@ -1,0 +1,13 @@
+ros-melodic-leo-robot (1.1.0-1stretch) stretch; urgency=high
+
+  * Add leo_robot metapackage
+
+ -- Błażej Sowa <blazej@turtlerover.com>  Fri, 16 Oct 2020 00:00:00 -0000
+
+ros-melodic-leo-robot (1.0.2-1stretch) stretch; urgency=high
+
+
+
+ -- Błażej Sowa <blazej@turtlerover.com>  Wed, 23 Sep 2020 00:00:00 -0000
+
+

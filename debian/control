@@ -1,0 +1,12 @@
+Source: ros-melodic-leo-fw
+Section: misc
+Priority: optional
+Maintainer: Błażej Sowa <blazej@turtlerover.com>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin
+Homepage: http://wiki.ros.org/leo_fw
+Standards-Version: 3.9.2
+
+Package: ros-melodic-leo-fw
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python-rospkg, python-whichcraft, ros-melodic-rosgraph, ros-melodic-rosmon-msgs, ros-melodic-rosnode, ros-melodic-rospy, ros-melodic-rosservice, ros-melodic-std-srvs
+Description: Firmware binary releases and update script for Leo Rover

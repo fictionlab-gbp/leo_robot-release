@@ -2,6 +2,10 @@
 Changelog for package leo_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.1.3 (2020-12-18)
+------------------
+* Add tf_frame_prefix argument to the launch file
+
 1.1.2 (2020-11-25)
 ------------------
 * Add rosapi node

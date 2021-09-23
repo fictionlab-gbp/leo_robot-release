@@ -1,0 +1,100 @@
+ros-noetic-leo-bringup (1.2.0-1buster) buster; urgency=high
+
+  * Core2 parameters: change input_timeout to float, add robot and odom frame_id parameters
+  * Delete launch prefix from serial_node
+  * Avoid deprecation warnings from xacro and robot_state_publisher
+  * Update author and maintainer info
+
+ -- Fictionlab <support@fictionlab.pl>  Fri, 23 Apr 2021 00:00:00 -0000
+
+ros-noetic-leo-bringup (1.1.3-1buster) buster; urgency=high
+
+  * Add tf_frame_prefix argument to the launch file
+
+ -- Fictionlab <support@fictionlab.pl>  Fri, 18 Dec 2020 00:00:00 -0000
+
+ros-noetic-leo-bringup (1.1.2-1buster) buster; urgency=high
+
+  * Add rosapi node
+
+ -- Fictionlab <support@fictionlab.pl>  Wed, 25 Nov 2020 00:00:00 -0000
+
+ros-noetic-leo-bringup (1.1.1-1buster) buster; urgency=high
+
+
+
+ -- Fictionlab <support@fictionlab.pl>  Mon, 19 Oct 2020 00:00:00 -0000
+
+ros-noetic-leo-bringup (1.1.0-1buster) buster; urgency=high
+
+  * Update package description
+  * Increase cmake minimum version
+  * Change CMakeLists formatting
+  * Add xacro to dependencies, remove raspicam_node from dependencies
+
+ -- Fictionlab <support@fictionlab.pl>  Fri, 16 Oct 2020 00:00:00 -0000
+
+ros-noetic-leo-bringup (1.0.2-1buster) buster; urgency=high
+
+  * Changed camera frame name to camera_optical_frame
+
+ -- Fictionlab <support@fictionlab.pl>  Wed, 23 Sep 2020 00:00:00 -0000
+
+ros-noetic-leo-bringup (1.0.1-1buster) buster; urgency=high
+
+  * used relative topic names in leo_system node
+
+ -- Fictionlab <support@fictionlab.pl>  Wed, 22 Apr 2020 00:00:00 -0000
+
+ros-noetic-leo-bringup (1.0.0-1buster) buster; urgency=high
+
+  * fixed leo_system shutdown command
+  * added configuration files for camera and core2 firmware
+  * added motors_model argument to the launch file
+
+ -- Fictionlab <support@fictionlab.pl>  Tue, 24 Mar 2020 00:00:00 -0000
+
+ros-noetic-leo-bringup (0.6.0-1buster) buster; urgency=high
+
+  * changed camera frame id to camera_frame
+  * added upload_description argument to leo_bringup.launch file
+
+ -- Fictionlab <support@fictionlab.pl>  Wed, 12 Feb 2020 00:00:00 -0000
+
+ros-noetic-leo-bringup (0.5.0-1buster) buster; urgency=high
+
+  * change camera frame_id
+  * add robot state publisher, change rosserial baudrate, add camera calibration file
+
+ -- Fictionlab <support@fictionlab.pl>  Wed, 02 Oct 2019 00:00:00 -0000
+
+ros-noetic-leo-bringup (0.4.0-1buster) buster; urgency=high
+
+  * don't use husarion cloud
+
+ -- Fictionlab <support@fictionlab.pl>  Wed, 04 Sep 2019 00:00:00 -0000
+
+ros-noetic-leo-bringup (0.3.0-1buster) buster; urgency=high
+
+  * set unregister timeout in rosbridge_server
+
+ -- Fictionlab <support@fictionlab.pl>  Thu, 11 Jul 2019 00:00:00 -0000
+
+ros-noetic-leo-bringup (0.2.0-1buster) buster; urgency=high
+
+  * remap topics, change stream quality
+
+ -- Fictionlab <support@fictionlab.pl>  Wed, 10 Jul 2019 00:00:00 -0000
+
+ros-noetic-leo-bringup (0.1.0-1buster) buster; urgency=high
+
+  * add LICENSE
+  * add leo_system script
+  * add install targets to CMakeLists
+  * add raspicam_node
+  * package cleanup
+  * Initial commit
+
+ -- Fictionlab <support@fictionlab.pl>  Thu, 06 Jun 2019 00:00:00 -0000
+
+

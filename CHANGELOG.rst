@@ -2,6 +2,9 @@
 Changelog for package leo_robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.2.1 (2021-09-28)
+------------------
+
 1.2.0 (2021-04-23)
 ------------------
 * Update author and maintainer info

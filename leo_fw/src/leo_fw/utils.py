@@ -1,4 +1,5 @@
 import sys
+from builtins import input
 
 
 def is_tool(name):
@@ -8,6 +9,7 @@ def is_tool(name):
     @return True if executable exists, False otherwise
     """
     from whichcraft import which
+
     return which(name) is not None
 
 
@@ -20,8 +22,7 @@ def query_yes_no(question, default="yes"):
         an answer is required of the user).
     @return True if the answer is "yes", False otherwise
     """
-    valid = {"yes": True, "y": True, "ye": True,
-             "no": False, "n": False}
+    valid = {"yes": True, "y": True, "ye": True, "no": False, "n": False}
     if default is None:
         prompt = " [y/n] "
     elif default == "yes":
@@ -33,14 +34,13 @@ def query_yes_no(question, default="yes"):
 
     while True:
         sys.stdout.write(question + prompt)
-        choice = raw_input().lower()
-        if default is not None and choice == '':
+        choice = input().lower()
+        if default is not None and choice == "":
             return valid[default]
         elif choice in valid:
             return valid[choice]
         else:
-            print("Please respond with 'yes' or 'no' "
-                  "(or 'y' or 'n').")
+            print("Please respond with 'yes' or 'no' " "(or 'y' or 'n').")
 
 
 def write_flush(msg):

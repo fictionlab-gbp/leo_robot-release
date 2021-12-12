@@ -1,0 +1,63 @@
+ros-noetic-leo-fw (2.0.0-1buster) buster; urgency=high
+
+  * Add Leo Hat firmware binary
+  * Update package description
+  * Get rid of python2 dependencies
+  * Rename core2 firmware binary
+  * Allow explicitly specifying board type in flash script
+  * Add functions for determining board type and firmware version
+  * Use format strings when applicable
+  * Add initial Leo Hat support
+  * Add firmware_message_parser node
+
+ -- Fictionlab <support@fictionlab.pl>  Sun, 12 Dec 2021 00:00:00 -0000
+
+ros-noetic-leo-fw (1.2.1-1buster) buster; urgency=high
+
+  * Reformat python code with black
+  * Make the code python 2-3 compatible
+
+ -- Fictionlab <support@fictionlab.pl>  Tue, 28 Sep 2021 00:00:00 -0000
+
+ros-noetic-leo-fw (1.2.0-1buster) buster; urgency=high
+
+  * Bundle a new firmware binary release (v1.2.0)
+  * Add flash script to CMakeLists
+  * Add flash script for flashing custom firmware
+  * Add arguments to the flash_firmware function
+  * Update author and maintainer info
+
+ -- Fictionlab <support@fictionlab.pl>  Fri, 23 Apr 2021 00:00:00 -0000
+
+ros-noetic-leo-fw (1.1.3-1buster) buster; urgency=high
+
+
+
+ -- Fictionlab <support@fictionlab.pl>  Fri, 18 Dec 2020 00:00:00 -0000
+
+ros-noetic-leo-fw (1.1.2-1buster) buster; urgency=high
+
+
+
+ -- Fictionlab <support@fictionlab.pl>  Wed, 25 Nov 2020 00:00:00 -0000
+
+ros-noetic-leo-fw (1.1.1-1buster) buster; urgency=high
+
+  * Add setuptools to buildtool dependencies
+  * Fix CMakeLists, install update script
+
+ -- Fictionlab <support@fictionlab.pl>  Mon, 19 Oct 2020 00:00:00 -0000
+
+ros-noetic-leo-fw (1.1.0-1buster) buster; urgency=high
+
+  * Add leo_fw package
+
+ -- Fictionlab <support@fictionlab.pl>  Fri, 16 Oct 2020 00:00:00 -0000
+
+ros-noetic-leo-fw (1.0.2-1buster) buster; urgency=high
+
+
+
+ -- Fictionlab <support@fictionlab.pl>  Wed, 23 Sep 2020 00:00:00 -0000
+
+

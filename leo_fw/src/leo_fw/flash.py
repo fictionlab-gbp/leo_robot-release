@@ -35,7 +35,7 @@ def flash_core2(bootloader_path: str, firmware_path: str):
     print("--> Flashing completed!")
 
 
-def flash_leo_hat(firmware_path: str):
+def flash_leocore(firmware_path: str):
     print("--> Disabling flash read/write protections")
     subprocess.check_call("stm32loader -c rpi -f F4 -u -W", shell=True)
 
@@ -95,7 +95,7 @@ def flash_firmware(
     if master_online:
         write_flush("--> Checking if rosserial node is active.. ")
 
-        if "/serial_node" in rosnode.get_node_names():
+        if rospy.resolve_name("serial_node") in rosnode.get_node_names():
             print("YES")
             serial_node_active = True
         else:
@@ -140,8 +140,8 @@ def flash_firmware(
     if master_online and serial_node_active:
         write_flush("--> Checking if rosmon service is available.. ")
 
-        if "/rosmon/start_stop" in rosservice.get_service_list():
-            start_stop = rospy.ServiceProxy("/rosmon/start_stop", StartStop)
+        if rospy.resolve_name("rosmon/start_stop") in rosservice.get_service_list():
+            start_stop = rospy.ServiceProxy("rosmon/start_stop", StartStop)
             print("YES")
             rosmon_available = True
         else:
@@ -155,21 +155,20 @@ def flash_firmware(
 
         board_type = prompt_options(
             [
+                ("LeoCore", BoardType.LEOCORE),
                 ("Husarion CORE2", BoardType.CORE2),
-                ("Leo Hat", BoardType.LEO_HAT),
             ]
         )
 
     #####################################################
-
 
     if firmware_path is not None:
         firmware_version = "<unknown>"
     else:
         if board_type == BoardType.CORE2:
             firmware_version = "1.2.0"
-        elif board_type == BoardType.LEO_HAT:
-            firmware_version = "1.0.0"
+        elif board_type == BoardType.LEOCORE:
+            firmware_version = "1.0.1"
 
     print(f"Current firmware version: {current_firmware_version}")
     print(f"Version of the firmware to flash: {firmware_version}")
@@ -182,7 +181,9 @@ def flash_firmware(
     if master_online and serial_node_active:
         if rosmon_available:
             write_flush("--> Stopping the rosserial node.. ")
-            start_stop("serial_node", "", StartStopRequest.STOP)
+            start_stop(
+                "serial_node", rospy.get_namespace().rstrip("/"), StartStopRequest.STOP
+            )
             rospy.sleep(1)
             print("DONE")
         else:
@@ -210,21 +211,23 @@ def flash_firmware(
 
         flash_core2(bootloader_path, firmware_path)
 
-    elif board_type == BoardType.LEO_HAT:
+    elif board_type == BoardType.LEOCORE:
         if firmware_path is None:
             firmware_path = os.path.join(
                 rospkg.RosPack().get_path("leo_fw"),
-                "firmware/leo_hat_firmware.bin",
+                "firmware/leocore_firmware.bin",
             )
 
-        flash_leo_hat(firmware_path)
+        flash_leocore(firmware_path)
 
     #####################################################
 
     if master_online and serial_node_active:
         if rosmon_available:
             write_flush("--> Starting the rosserial node.. ")
-            start_stop("serial_node", "", StartStopRequest.START)
+            start_stop(
+                "serial_node", rospy.get_namespace().rstrip("/"), StartStopRequest.START
+            )
             print("DONE")
         else:
             print("You can now start the rosserial node.")

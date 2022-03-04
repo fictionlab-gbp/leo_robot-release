@@ -2,6 +2,13 @@
 Changelog for package leo_fw
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.0 (2022-03-04)
+------------------
+* Update core2 and leocore firmwares
+* Resolve pylint errors
+* Reformat python code with black
+* Reformat cpp code with clang-format
+
 2.0.3 (2022-01-18)
 ------------------
 * Fix some problems reported by catkin_lint

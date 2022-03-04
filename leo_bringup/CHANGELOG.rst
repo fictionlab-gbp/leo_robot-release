@@ -2,6 +2,10 @@
 Changelog for package leo_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.0 (2022-03-04)
+------------------
+* Update parameter names
+
 2.0.3 (2022-01-18)
 ------------------
 * Fix some problems reported by catkin_lint

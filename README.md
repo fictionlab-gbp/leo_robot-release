@@ -1,3 +1,29 @@
+## leo_robot (noetic) - 2.3.0-1
+
+The packages in the `leo_robot` repository were released into the `noetic` distro by running `/usr/bin/bloom-release --rosdistro noetic leo_robot` on `Wed, 24 Aug 2022 16:26:28 -0000`
+
+These packages were released:
+- `leo_bringup`
+- `leo_fw`
+- `leo_robot`
+
+Version of package(s) in repository `leo_robot`:
+
+- upstream repository: https://github.com/LeoRover/leo_robot.git
+- release repository: https://github.com/fictionlab-gbp/leo_robot-release.git
+- rosdistro version: `2.2.0-1`
+- old version: `2.2.0-1`
+- new version: `2.3.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.11.2`
+- catkin_pkg version: `0.5.2`
+- rosdep version: `0.22.1`
+- rosdistro version: `0.9.0`
+- vcstools version: `0.1.42`
+
+
 ## leo_robot (noetic) - 2.2.0-1
 
 The packages in the `leo_robot` repository were released into the `noetic` distro by running `/usr/bin/bloom-release --rosdistro noetic leo_robot` on `Mon, 21 Mar 2022 12:41:53 -0000`

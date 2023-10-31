@@ -1,13 +1,14 @@
 <?xml version="1.0"?>
 <package format="3">
   <name>leo_fw</name>
-  <version>2.3.0</version>
+  <version>2.4.0</version>
   <description>
     Binary releases of Leo Rover firmware and related utilities
   </description>
 
   <maintainer email="support@fictionlab.pl">Fictionlab</maintainer>
   <author email="blazej@fictionlab.pl">Błażej Sowa</author>
+  <author email="aleks@fictionlab.pl">Aleksander Szymański</author>
 
   <license>MIT</license>
 
@@ -26,13 +27,13 @@
   <exec_depend>rosnode</exec_depend>
   <exec_depend>rosservice</exec_depend>
 
-  <exec_depend>std_srvs</exec_depend>
   <exec_depend>rosmon_msgs</exec_depend>
   
   <exec_depend>python3-numpy</exec_depend>
 
   <depend>roscpp</depend>
   <depend>sensor_msgs</depend>
+  <depend>std_srvs</depend>
   <depend>nav_msgs</depend>
   <depend>yaml-cpp</depend>
 
